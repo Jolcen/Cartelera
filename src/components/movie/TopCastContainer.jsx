@@ -3,7 +3,6 @@ import { ActorCard } from './ActorCard'
 import "./TopCastContainer.css";
 
 export const TopCastContainer = ({pelis}) => {
-  // const actors = pelis.Actors ? pelis.Actors.split(", ") : [];
   const actors = pelis.Actors ? pelis.Actors.split(", ") : [];
   return (
     <section className="top-cast-container">
@@ -14,9 +13,7 @@ export const TopCastContainer = ({pelis}) => {
               actors.map((actor)=>{
                 return <ActorCard actor={actor} key={actor.id}/>
               })
-              
             }
-            
         </div>
     </section>
   )

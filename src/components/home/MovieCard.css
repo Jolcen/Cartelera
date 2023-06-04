@@ -1,0 +1,11 @@
+.moviecard-container{
+    width: 96px;
+    border-radius: 17px;
+    margin: 5px;
+}
+
+.moviecard-container img{
+    width: 96px;
+    height: 121px;
+    border-radius: 17px;
+}

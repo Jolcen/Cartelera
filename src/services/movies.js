@@ -3,7 +3,7 @@ export const getMovies = async(title) => {
     const formatTitle = titlePlus(title)
     const apiURL = `https://www.omdbapi.com/`
     const apiTitle = `${apiURL}?t=${formatTitle}&apiKey=${moviekey}`
-    console.log(apiTitle)
+    //console.log(apiTitle)
     const response = await fetch (apiTitle)
     const data = await response.json()
 

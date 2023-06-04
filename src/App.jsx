@@ -1,6 +1,6 @@
-import { MovieMain } from "./components/MovieMain";
-import { TopCastContainer } from "./components/TopCastContainer";
-import { BookingButton } from "./components/BookingButton";
+import { MovieMain } from "./components/movie/MovieMain";
+import { TopCastContainer } from "./components/movie/TopCastContainer";
+import { BookingButton } from "./components/movie/BookingButton";
 import { useEffect, useState } from "react";
 import { getMovies } from "./services/movies";
 
