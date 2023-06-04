@@ -18,6 +18,9 @@ const Home = () => {
     <div>
         <Search/>
         <SeccionMovie poster = {posters} title={"New Movies"}/>
+        <SeccionMovie poster = {posters} title={"Comming Soon"}/>
+        <SeccionMovie poster = {posters} title={"Top Movie"}/>
+        <SeccionMovie poster = {posters} title={"Accion Movie"}/>
         <NavBar/>
     </div>
   )
