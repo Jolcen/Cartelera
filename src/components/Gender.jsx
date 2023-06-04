@@ -2,9 +2,9 @@ import React from 'react'
 import Chip from './Chip'
 import "./Gender.css"
 
-export const Gender = ({movies}) => {
+export const Gender = ({movie}) => {
 
-  const gender = movies.Genre ? movies.Genre.split(", ") : [];
+  const gender = movie.gender
   return (
     <div className='gender-container'>
     {

@@ -1,15 +1,16 @@
 import React from 'react'
 import { Gender } from './Gender'
+import movie from "../assets/movie.json"
 import "./MovieMain.css"
 
-export const MovieMain = ({movies}) => {
+export const MovieMain = ({dogs}) => {
   return (
     <div className='movie-main-container'>
-        <img src={movies.Poster} alt="" />
-        <Gender movies = {movies}/>
+        <img src={dogs[0]?.url} alt="" />
+        <Gender movie = {movie}/>
         <span>
             {
-                movies.Plot
+                movie.resume
             }
         </span>
     </div>

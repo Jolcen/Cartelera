@@ -8,17 +8,18 @@ import './App.css'
 
 function App() {
 
-  const [movies, setMovies] = useState("");
+  const [dogs, setDogs] = useState("");
+  console.log(dogs);
   useEffect(() => {
-    fetch("https://omdbapi.com/?t=Ready+Player+One&apikey=4a9f0858")
-      .then((response) => response.json())
-      .then((data) => setMovies(data));
-  }, []);
+  fetch("https://api.thecatapi.com/v1/images/search")
+       .then((response) => response.json())
+       .then((data) => setDogs(data));
+  }, []); 
 
   return (
     <div className="App">
-      <MovieMain movies={movies} />
-      <TopCastContainer movies={movies} />
+      <MovieMain dogs={dogs} />
+      <TopCastContainer/>
       <BookingButton/>
     </div>
   )

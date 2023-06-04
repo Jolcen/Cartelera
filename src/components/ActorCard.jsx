@@ -6,7 +6,7 @@ export const ActorCard = (props) => {
   return (
     <div className="actor-container">
         <img src={actor.imgsrc} alt=""/>
-        <span>{actor}</span>
+        <span>{actor.name}</span>
     </div>
   )
 }
