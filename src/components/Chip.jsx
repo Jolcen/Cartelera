@@ -1,12 +1,10 @@
-import "./Chip.css"
 import React from 'react'
+import "./Chip.css"
 
-const Chip = ({genero}) => {
+export const Chip = ({genero}) => {
   return (
-    <div className="chip">
+    <div className='chip'>
       {genero}
     </div>
   )
 }
-
-export default Chip

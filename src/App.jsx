@@ -1,24 +1,22 @@
+import { MovieMain } from "./components/MovieMain";
+import { TopCastContainer } from "./components/TopCastContainer";
+import { BookingButton } from "./components/BookingButton";
 import { useEffect, useState } from "react";
+import { getMovies } from "./services/movies";
 
-import { MovieMain } from './components/MovieMain'
-import { TopCastContainer } from './components/TopCastContainer'
-import { BookingButton } from './components/BookingButton'
-
-import './App.css'
+import "./App.css";
 
 function App() {
 
-  const [movies, setMovies] = useState("");
+  const [peli, setPeli] = useState("");
   useEffect(() => {
-    fetch("https://omdbapi.com/?t=Ready+Player+One&apikey=4a9f0858")
-      .then((response) => response.json())
-      .then((data) => setMovies(data));
+    getMovies("Ready Player One").then((data) => setPeli(data))
   }, []);
 
   return (
     <div className="App">
-      <MovieMain movies={movies} />
-      <TopCastContainer movies={movies} />
+      <MovieMain peli={peli} />
+      <TopCastContainer pelis={peli}/>
       <BookingButton/>
     </div>
   )
